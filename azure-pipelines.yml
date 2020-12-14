@@ -48,7 +48,7 @@ steps:
       <protection id="constants" />
       <!-- <protection id="anti tamper" /> -->
       </rule>
-      <module path="D:\a\1\s\SharpStay\bin\Release\SharpStay.exe"/>
+      <module path="D:\a\1\s\SharpStay\SharpStay\bin\Release\SharpStay.exe"/>
       </project>
       "@|Out-File -FilePath confuserex.crproj
       mkdir confused
@@ -63,7 +63,7 @@ steps:
 - task: AzureFileCopy@3
   name: UploadFile
   inputs:
-    SourcePath: 'D:\a\1\s\confused\SharpStay\bin\Release\SharpStay.exe'
+    SourcePath: 'D:\a\1\s\confused\SharpStay\SharpStay\bin\Release\SharpStay.exe'
     azureSubscription: $(SubName)
     Destination: 'AzureBlob'
     storage: $(StorageAccount)
